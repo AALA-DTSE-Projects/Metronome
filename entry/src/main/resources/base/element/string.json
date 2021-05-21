@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "Metronome"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Wearable_Empty Feature Ability"
+    },
+    {
+      "name": "HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "lbl_landing",
+      "value": "Click To Start"
+    },
+    {
+      "name": "lbl_start",
+      "value": "Start"
+    },
+    {
+      "name": "lbl_stop",
+      "value": "Stop"
+    }
+  ]
+}

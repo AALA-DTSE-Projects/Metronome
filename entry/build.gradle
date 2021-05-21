@@ -1,0 +1,37 @@
+apply plugin: 'com.huawei.ohos.hap'
+apply plugin: 'com.huawei.ohos.decctest'
+ohos {
+    signingConfigs {
+        debug {
+            storeFile file('D:\\Project\\Metronome\\debug.p12')
+            storePassword '0000001BA2A922A9366525EAC566EF4EA6F5BDCBD8BFB8459A21F7B225BBB62EFF6DEEB57FEA99E27A5CC7'
+            keyAlias = 'debug'
+            keyPassword '0000001B654A9629784B04E37A4BDC6574E25D965018C7833CCCCB0DCFC90A989C57E918995052926C319D'
+            signAlg = 'SHA256withECDSA'
+            profile file('D:\\Project\\Metronome\\metronome_debugDebug.p7b')
+            certpath file('D:\\Project\\Metronome\\metronome_debug.cer')
+        }
+    }
+    compileSdkVersion 5
+    defaultConfig {
+        compatibleSdkVersion 4
+    }
+    buildTypes {
+        release {
+            proguardOpt {
+                proguardEnabled false
+                rulesFiles 'proguard-rules.pro'
+            }
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.har'])
+    testImplementation 'junit:junit:4.13'
+    ohosTestImplementation 'com.huawei.ohos.testkit:runner:1.0.0.100'
+}
+decc {
+    supportType = ['html', 'xml']
+}
